@@ -62,6 +62,9 @@ public class Transaction {
         this.timestamp = timestamp;
     }
 
+    public Transaction() {
+    }
+
     public Transaction(Long id, String senderUpiId, String receiverUpiId, Double amount, LocalDateTime timestamp) {
         this.id = id;
         this.senderUpiId = senderUpiId;
