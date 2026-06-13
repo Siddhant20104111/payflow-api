@@ -36,4 +36,12 @@ public class UserController {
     }
 
 
+    @PostMapping("/test")
+    public User test(User user){
+        System.out.println(user);
+        return user;
+    }
+
+
+
 }
