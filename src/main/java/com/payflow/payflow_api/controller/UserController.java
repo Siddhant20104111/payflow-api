@@ -42,6 +42,17 @@ public class UserController {
         return user;
     }
 
+    @PostMapping("/test2")
+    public User test2(@RequestBody User user) {
+        System.out.println(user);
+        return user;
+    }
+
+    @GetMapping("/balance/{amount}")
+    public List<User> getRichUsers(@PathVariable Double amount){
+
+        return userService.findUsersWithBalanceGreaterThan(amount);
+    }
 
 
 }
